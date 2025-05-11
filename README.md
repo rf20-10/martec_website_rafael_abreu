@@ -53,12 +53,12 @@ The website includes:
    `http://127.0.0.1:8000`
 
 ## Project Structure Overview
-
+```
 martec/
-├── requirements.txt             
-├── requirements-overview.md       
+├── requirements.txt
+├── requirements-overview.md
 ├── README.md
-├── design.md      
+├── design.md
 ├── martec/
 │   ├── static/martec/
 │   │   ├── script.js
@@ -82,9 +82,10 @@ martec/
 │   ├── settings.py
 │   ├── urls.py
 │   ├── wsgi.py
+```
 
 ## Dependencies
-
+```
 Listed in `requirements.txt`:  
 -asgiref==3.8.1
 -dj-database-url==2.3.0
@@ -96,7 +97,7 @@ Listed in `requirements.txt`:
 -python-dotenv==1.1.0
 -sqlparse==0.5.3
 -typing_extensions==4.13.2
-
+```
 # Project Overview
 
 ## views.py
