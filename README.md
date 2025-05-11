@@ -44,12 +44,16 @@ The website includes:
 4. Apply migrations:  
    ```bash
    python manage.py migrate
-   ```  
-5. Start the development server:  
+   ```
+5. Load exported data in the database:  
+   ```bash
+   python manage.py loaddata martec/fixtures.json
+   ``` 
+6. Start the development server:  
    ```bash
    python manage.py runserver
    ```  
-6. Open your browser and go to:  
+7. Open your browser and go to:  
    `http://127.0.0.1:8000`
 
 ## Project Structure Overview
