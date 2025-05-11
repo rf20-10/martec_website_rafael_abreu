@@ -98,8 +98,9 @@ Listed in `requirements.txt`:
 -sqlparse==0.5.3
 -typing_extensions==4.13.2
 ```
-# Project Overview
 
+# Project Overview
+```
 ## views.py
 
 This file contains the core views handling user-facing pages:
@@ -232,3 +233,4 @@ Handles client-side search and toast display:
 
 ## Final notes
 Pillow is a Python additional package used for image processing in the products.html page. For more information, visit requirements.md file.
+```
