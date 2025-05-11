@@ -1,0 +1,123 @@
+{% extends "martec/layout.html" %}
+{% load static %}
+
+{% block title %}Contato - Martec Artefatos de Concreto{% endblock %}
+
+{% block body %}
+<!-- Hero Section -->
+<section class="py-5 text-center bg-white">
+    <!-- Hero Info Block -->
+    <div class="container">
+        <h1 class="display-5 fw-bold">Fale com a gente</h1>
+        <p class="lead">Tem uma dúvida, precisa de um orçamento ou quer saber mais sobre nossos produtos? <br>
+        Entre em contato com a gente pelo telefone, e-mail ou Instagram — ou, se preferir, preencha o formulário abaixo. Estamos prontos para ajudar!</p>
+    </div>
+</section>
+<!-- Contact Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <!-- Contact Info Block -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8">
+                <div class="p-4 bg-white shadow-sm rounded text-center">
+                    <h5 class="mb-3">Formas de contato</h5>
+                    <p><strong>📞 Telefone:</strong> <a href="https://api.whatsapp.com/send/?phone=5515997818280">(15) 99781-8280</a></p>
+                    <p><strong>✉️ E-mail:</strong> <a href="mailto:contato@martec.com.br">contato@martec.com.br</a></p>
+                    <p><strong>📷 Instagram:</strong> <a href="https://www.instagram.com/_martecpiedade" target="_blank">@_martecpiedade</a></p>
+                
+                    <hr class="my-4">
+
+                    <p>📍 <strong>Endereço:</strong> 
+                        <a href="https://www.google.com/maps/dir//Estr.+dos+Lavradores,+N+240+-+Parque+da+Torre,+Piedade+-+SP,+18170-000,+Brazil/@-23.7213279,-47.4899638,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94cf7ef5d1e6344d:0xd8ef45ef5082b353!2m2!1d-47.4075622!2d-23.7213497?entry=ttu&g_ep=EgoyMDI1MDQzMC4xIKXMDSoASAFQAw%3D%3D">
+                            Estr. dos Lavradores, N 240 - Parque da Torre, Piedade - SP, 18170-000
+                        </a>
+                    </p>
+                    <p>🕒 <strong>Horário:</strong> Segunda a sexta, das 7:30h às 17:30h</p>
+                </div>
+            </div>
+        </div>    
+
+        <!-- Contact Form Block -->
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form method="post" novalidate id="contactForm" data-form-status="{{ form_status|default:'' }}">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            {{ form.first_name.label_tag }}
+                            <input 
+                                type="text" 
+                                name="{{ form.first_name.name }}" 
+                                value="{{ form.first_name.value|default_if_none:'' }}" 
+                                class="form-control{% if form.first_name.errors %} is-invalid{% endif %}">
+                            {% for error in form.first_name.errors %}
+                                <div class="invalid-feedback">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            {{ form.last_name.label_tag }}
+                            <input 
+                                type="text" 
+                                name="{{ form.last_name.name }}" 
+                                value="{{ form.last_name.value|default_if_none:'' }}" 
+                                class="form-control{% if form.last_name.errors %} is-invalid{% endif %}">
+                            {% for error in form.last_name.errors %}
+                                <div class="invalid-feedback">{{ error }}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                
+                    <div class="mb-3">
+                        {{ form.email.label_tag }}
+                        <input 
+                            type="email" 
+                            name="{{ form.email.name }}" 
+                            value="{{ form.email.value|default_if_none:'' }}" 
+                            class="form-control{% if form.email.errors %} is-invalid{% endif %}">
+                        {% for error in form.email.errors %}
+                            <div class="invalid-feedback">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+                
+                    <div class="mb-3">
+                        {{ form.phone.label_tag }}
+                        <input 
+                            type="text" 
+                            name="{{ form.phone.name }}" 
+                            value="{{ form.phone.value|default_if_none:'' }}" 
+                            class="form-control{% if form.phone.errors %} is-invalid{% endif %}">
+                        {% for error in form.phone.errors %}
+                            <div class="invalid-feedback">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+                
+                    <div class="mb-3">
+                        {{ form.message.label_tag }}
+                        <textarea 
+                            name="{{ form.message.name }}" 
+                            class="form-control{% if form.message.errors %} is-invalid{% endif %}" 
+                            rows="5">{{ form.message.value|default_if_none:'' }}</textarea>
+                        {% for error in form.message.errors %}
+                            <div class="invalid-feedback">{{ error }}</div>
+                        {% endfor %}
+                    </div>
+                
+                    <button type="submit" class="btn btn-danger">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>    
+
+<!-- Toast container -->
+<div aria-live="polite" aria-atomic="true" class="position-fixed bottom-0 end-0 p-3" style="z-index: 1055">
+    <div id="liveToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body" id="toastMessage">
+                Mensagem recebida! Em breve, nossa equipe entrará em contato com as melhores soluções para você.
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+{% endblock %}

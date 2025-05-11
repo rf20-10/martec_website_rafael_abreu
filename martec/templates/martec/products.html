@@ -1,0 +1,39 @@
+{% extends "martec/layout.html" %}
+
+{% load static %}
+
+{% block title %}Produtos - Martec Artefatos de Concreto{% endblock %}
+
+{% block body %}
+<!-- Products Hero Text -->
+<h1 class="page-title-std">Nossos produtos</h1>
+
+<!-- Products Search Bar -->
+<div class="mb-4">
+    <input type="text" id="productSearch" class="form-control mb-2" placeholder="O que você está procurando?">
+    <button class="btn btn-primary" onclick="scrollToProduct()">Buscar</button>
+</div>
+
+<!-- Products Info Blocks -->
+<div class="row">
+    {% for product in products %}
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            {% if product.picture %}
+                <img src="{{ product.picture.url }}" class="card-img-top" alt="{{ product.product_name }}">
+            {% else %}
+                <img src="{% static 'martec/general_products.jpg' %}" class="card-img-top" alt="{{ product.product_name }}">
+            {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title product-name">{{ product.product_name }}</h5>
+                    <p class="card-text">{{ product.description|truncatewords:20 }}</p>
+                </div>
+        </div>
+    </div>
+    {% empty %}
+    <div class="col-12">
+        <p>Nenhum produto cadastrado.</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

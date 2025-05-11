@@ -1,0 +1,62 @@
+{% extends "martec/layout.html" %}
+{% load static %}
+
+{% block title %}Sobre nós - Martec Artefatos de Concreto{% endblock %}
+
+{% block body %}
+
+<!-- Hero-style intro section -->
+<section class="py-5 text-center bg-white">
+    <div class="container">
+        <h1 class="display-5 fw-bold">Nossa história</h1>
+        <p class="lead">Há mais de 30 anos firmes no mercado, produzindo artefatos de concreto com qualidade e confiança.</p>
+    </div>
+</section>
+
+<!-- Image + Text Split Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <img src="{% static 'martec/about_us_pic.JPG' %}" class="img-fluid rounded" alt="Equipe Martec">
+            </div>
+            <div class="col-md-6">
+                <h2 class="fw-bold">De Piedade para toda a região</h2>
+                <p class="fs-5">Começamos pequenos, mas com um propósito claro: entregar qualidade. Hoje, atendemos Piedade e toda a região com produtos que duram e um atendimento que cria laços. Somos referência porque fazemos com carinho — como se fosse para nossa própria casa.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values / Mission Section -->
+<section class="py-5 bg-white">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-4">Nosso compromisso</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <h4>Qualidade</h4>
+                <p>Produtos duráveis, resistentes e confiáveis, testados no tempo e aprovados pelos nossos clientes.</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Transparência</h4>
+                <p>Preços justos, comunicação clara e compromisso com o que foi combinado — sem surpresas.</p>
+            </div>
+            <div class="col-md-4">
+                <h4>Atendimento</h4>
+                <p>Cuidamos de cada cliente como parte da família Martec. A satisfação de quem compra é nossa prioridade.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quote/Testimonial-style section -->
+<section class="py-5 bg-dark text-white text-center">
+    <div class="container">
+        <blockquote class="blockquote">
+            <p class="fs-4 mb-0">"Quem conhece, recomenda."</p>
+            <footer class="blockquote-footer text-white-50 mt-2">Clientes da Martec</footer>
+        </blockquote>
+    </div>
+</section>
+
+{% endblock %}

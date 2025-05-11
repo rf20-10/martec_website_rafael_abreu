@@ -1,0 +1,24 @@
+{% extends "martec/layout.html" %}
+
+{% load static %}
+
+{% block body_class %}{% endblock %}
+
+{% block title %}Martec Artefatos de Concreto{% endblock %}
+
+{% block body %}
+<!-- Hero section -->
+<section class="py-5 text-center bg-white">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Martec Artefatos de Concreto</h1>
+        <p class="lead">Há mais de 30 anos, a gente está firme no mercado produzindo artefatos de concreto com qualidade de verdade</p>
+        <a class="btn btn-danger btn-lg mt-3" href="https://api.whatsapp.com/send/?phone=5515997818280" role="button">Solicite seu orçamento</a>
+    </div>
+</section>    
+  
+<!-- Full-width image container -->
+<div class="index-image">
+    <img src="{% static 'martec/index_pic.jpeg' %}" alt="Imagem principal">
+</div>
+
+{% endblock %}
