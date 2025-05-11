@@ -21,9 +21,12 @@ The website includes:
 
 ## How to Run the Project Locally
 
-1. Extract the ZIP file you downloaded from Gradescope.  
-2. Open a terminal and navigate to the extracted folder.  
-3. Create and activate a virtual environment:  
+1. Clone the Repository from GitHub  
+   Open a terminal and run:  
+   ```bash
+    git clone https://github.com/rf20-10/martec_website_rafael_abreu.git
+   cd martec_website_rafael_abreu  
+2. Create and activate a virtual environment:  
    **Linux/macOS:**  
    ```bash
    python -m venv venv
@@ -34,19 +37,19 @@ The website includes:
    python -m venv venv
    venv\Scripts\activate
    ```  
-4. Install dependencies:  
+3. Install dependencies:  
    ```bash
    pip install -r requirements.txt
    ```  
-5. Apply migrations:  
+4. Apply migrations:  
    ```bash
    python manage.py migrate
    ```  
-6. Start the development server:  
+5. Start the development server:  
    ```bash
    python manage.py runserver
    ```  
-7. Open your browser and go to:  
+6. Open your browser and go to:  
    `http://127.0.0.1:8000`
 
 ## Project Structure Overview
