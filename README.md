@@ -1,6 +1,6 @@
 # Martec Concrete Products Website
 
-This is a website I built using Django for Martec, a concrete products company based in Piedade-SP, Brazil. It’s a family-owned business (owned by my family), and the goal of this project was to provide them with a simple, responsive, and professional web presence. The entire interface is in Portuguese and tailored to a Brazilian audience.
+This is a website I built using Django for Martec, a concrete products company based in Piedade-SP, Brazil. It’s a family-owned business (owned by my family), and the goal of this project was to provide them with a simple, responsive, and professional web presence. The entire interface is in Portuguese and tailored to a Brazilian audience. The code and project structure are in English. To test the UI in English, you can use translation tools like Google Translate, as demonstrated in the YouTube video.
 
 # Video presentation
 https://www.youtube.com/watch?v=T4Uhu7e23pY
