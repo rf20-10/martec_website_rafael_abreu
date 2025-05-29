@@ -31,8 +31,8 @@ function scrollToProduct(){
         }
     }
 
-    // Portuguese alert message "Product not found".
-    alert("Produto não encontrado");
+    // Portuguese toast message "Product not found".
+    showToast("Produto não encontrado", false);
 }
 
 function showToast(message, isSucess = true){
